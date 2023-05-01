@@ -1,0 +1,206 @@
+<aura:component controller="OpportunityConRoleController"
+                implements="force:lightningQuickActionWithoutHeader,force:hasRecordId,flexipage:availableForRecordHome">
+    <aura:attribute name="conName" type="string"/>
+    <aura:attribute name="roleName" type="string"/>
+    <aura:attribute name="amnt" type="decimal" default=""/>
+    
+    <lightning:card title="Opportunity" iconName="standard:opportunity" class="slds-p-arround_medium">
+        
+        <!-- Display a header with details about the account -->
+        <lightning:recordEditForm objectApiName="Opportunity">
+            <lightning:messages />
+            <div class="slds-page-header" role="banner">
+                <h1 class="slds-page-header__title slds-m-right_small
+                           slds-truncate slds-align-left">New Opportunity</h1>
+            </div>
+            <div class="slds-page-header" role="banner">
+                <h1 class="slds-page-header__title slds-m-right_small
+                           slds-truncate slds-align-left">Opportunity Edit</h1>
+            </div>
+            <!-- Display the new opportunity form -->
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_3-of-6">
+                    <div class="slds-grid slds-wrap"> 
+                        <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+                            <lightning:outputField fieldName="OwnerId" />
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-grid slds-wrap"> 
+                    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+                        <div class="slds-form-element"> 
+                            <lightning:inputField fieldName="Amount" onchange="{!c.findAmt}" aura:id="inputValue" /> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_3-of-6">
+                    <div class="slds-grid slds-wrap"> 
+                        <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+                            <lightning:inputField fieldName="Name" onclick="{!c.save}"/> /> 
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-grid slds-wrap"> 
+                    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+                        <div class="slds-form-element"> 
+                            <lightning:inputField fieldName="CloseDate" /> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_3-of-6">
+                    <div class="slds-grid slds-wrap"> 
+                        <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+                            <lightning:inputField fieldName="AccountId" />
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-grid slds-wrap"> 
+                    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+                        <div class="slds-form-element"> 
+                            <lightning:inputField fieldName="StageName" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_3-of-6">
+                    <div class="slds-grid slds-wrap"> 
+                        <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+                            <lightning:inputField fieldName="LeadSource" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slds-grid slds-wrap"> 
+                    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+                        <div class="slds-form-element"> 
+                            <lightning:inputField fieldName="Probability" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_3-of-6">
+                    <div class="slds-grid slds-wrap"> 
+                        <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+                            <lightning:inputField fieldName="TotalOpportunityQuantity" />
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </lightning:recordEditForm>
+        <lightning:recordEditForm objectApiName="OpportunityContactRole">
+            
+            <div class="slds-page-header" role="banner">
+                <h1 class="slds-page-header__title slds-m-right_small
+                           slds-truncate slds-align-left">Contact Role</h1>
+            </div>
+            
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_3-of-6">
+                    <div class="slds-grid slds-wrap"> 
+                        <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+                            <lightning:inputField fieldName="ContactId" aura:id="selectConID"/>
+                        </div> 
+                    </div>
+                </div>
+                <div class="slds-grid slds-wrap"> 
+                    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+                        <div class="slds-form-element"> 
+                            <lightning:inputField fieldName="Role" aura:id="selectRole"/> 
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+            <div>
+                <a href="javascript:void(0)" onclick="{!c.doSomething}" class="slds-align_absolute-center">Add Contact Role</a>
+            </div>
+            <article class="slds-card">
+                <div>
+                    <button class="slds-align_absolute-center">Add</button>
+                </div>
+            </article>
+        </lightning:recordEditForm>
+        <div class="slds-page-header" role="banner">
+            <h1 class="slds-page-header__title slds-m-right_small
+                       slds-truncate slds-align-left">Selected Contact Role</h1>
+            <lightning:inputField fieldName="Role" />
+            
+            
+            
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped" aria-label="Example table of Opportunities with striped rows">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Contact">Contact Name</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Role">Role</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{!v.conName}</td>
+                        <td>{!v.roleName}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            
+        </div>
+        <div class="slds-card__body">
+            <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout" role="grid" aria-label="Example table in a Card">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Name">Name</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Close Date">Close Date</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Stage">Stage</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Account">Account</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Contact Role">Contact Role</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="slds-hint-parent">
+                        <th scope="row">
+                            <div class="slds-truncate" title="Amy Choi">
+                                <a href="#" tabindex="-1">Amy Choi</a>
+                            </div>
+                        </th>
+                        <td role="gridcell">
+                            <div class="slds-truncate" title="Company One">Company One</div>
+                        </td>
+                        <td role="gridcell">
+                            <div class="slds-truncate" title="Director of Operations">Director of Operations</div>
+                        </td>
+                        <td role="gridcell">
+                            <div class="slds-truncate" title="adam@company.com">adam@company.com</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="Sales Manager">Sales Manager</div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <lightning:button label="Cancel" onclick="{!c.handleCancel}" class="slds-m-top_medium" />
+        <lightning:button label="Save" onclick="{!c.handleSaveOpportunity}"
+                          variant="brand" class="slds-m-top_medium"/>
+        
+    </lightning:card>
+</aura:component>

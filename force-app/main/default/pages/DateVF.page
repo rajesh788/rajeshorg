@@ -1,0 +1,4 @@
+<apex:page >
+    <p> Today's Date is {! TODAY() } </p>
+<p> Next week it will be {! TODAY() + 7 } </p>
+</apex:page>

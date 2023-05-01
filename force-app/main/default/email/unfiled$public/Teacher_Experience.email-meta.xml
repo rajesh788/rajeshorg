@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Teacher Exp more than 5 year</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Teacher Experience</name>
+    <style>none</style>
+    <subject>Teacher Expierence Changed</subject>
+    <textOnly>Dear {!Contact.FirstName}
+
+Your Experienced updated successfully.
+
+Your Total Experienced is {!Contact.Experia__c}.
+
+Your Detail is given below:-
+
+First Name:-  Last Name:-  {!Contact.LastName}
+Total Experience  {!Contact.Experia__c}
+
+Thanks School Admin</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

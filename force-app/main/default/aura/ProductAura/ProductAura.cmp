@@ -1,0 +1,80 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="ProductClassAura">
+    
+    <aura:attribute name="products" type="ProductClassAura.WrapperProductDetails[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+    <aura:attribute name="isProductScreen" type="Boolean" default="true" />
+    <aura:attribute name="displaySelectedProduct" type="Boolean" default="true" />
+    <aura:attribute name="selectedRows" type="Object[]" />
+    <aura:attribute name="selectedRecord" type="List"/>
+    <aura:attribute name="selectedRecordCmp" type="List"/>
+    <aura:attribute name="saveRecord" type="List"/>
+    <aura:if isTrue="{!v.isProductScreen}">
+        <lightning:input type="text" name="searchKey" label="Enter" aura:id="searchKey" onchange="{!c.searchKeyChange}" placeholder="Search Products..." /> 
+        
+        <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
+            <thead>
+                <tr class="slds-text-heading_label">  
+                    <th scope="col"><div class="slds-truncate" title="Name">Select</div></th>
+                    <th scope="col"><div class="slds-truncate" title="Name">Name</div></th>
+                    <th scope="col"><div class="slds-truncate" title="Type">ProductCode</div></th>         
+                    <th scope="col"><div class="slds-truncate" title="Phone">List Price</div></th> 
+                    <th scope="col"><div class="slds-truncate" title="Phone">Product Description</div></th> 
+                    <th scope="col"><div class="slds-truncate" title="Phone">Product Family</div></th> 
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.products}" var="pro">
+                    <tr>  <td>
+                        <label class="slds-checkbox">
+                            <ui:inputCheckbox aura:id="checkbox"  label="" value="{!pro.checked}"  />
+                            <span class="slds-checkbox--faux"  />
+                            <span class="slds-form-element__label"></span>
+                        </label>
+                        </td>
+                        <td onclick="{!c.handleRowAction}"><div class="slds-truncate"  title="{productObj.Name}">{!pro.productObj.Name}</div></td>
+                        <td><div class="slds-truncate" title="{ProductCode}">{!pro.productObj.ProductCode}</div></td>                   
+                        <td onclick="{!c.handleRowAction}"><div class="slds-truncate" title="{Price}">{!pro.priceDec}</div></td> 
+                        <td><div class="slds-truncate" title="{Description}">{!pro.productObj.Description}</div></td>
+                        <td><div class="slds-truncate" title="{Family}">{!pro.productObj.Family}</div></td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+        <lightning:button variant="Neutral" label="Cancel" title="Cancel" onclick="{ }" />
+        <ui:button label="Next" disabled= ""  press="{! c.moveSelectedRows }"/>
+    </aura:if>
+    
+    <div class="exampleHolder">
+        <aura:if isTrue="{! v.displaySelectedProduct }">
+            <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
+                <thead>
+                    <tr class="slds-text-heading_label">  
+                        <th scope="col"><div class="slds-truncate" title="Name">Product</div></th>
+                        <th scope="col"><div class="slds-truncate" title="Type">Quantity</div></th>         
+                        <th scope="col"><div class="slds-truncate" title="Text">Sales Price</div></th> 
+                        <th scope="col"><div class="slds-truncate" title="Text">Date</div></th> 
+                        <th scope="col"><div class="slds-truncate" title="Text">Line Description</div></th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.selectedRecord}" var="pro1">
+                        <tr>  
+                            <td><div class="slds-truncate" title="Name">{!pro1.productObj.Name}</div></td>
+                            <td class="inputbd"><lightning:input name="Quantity" aura:id="myQty" fieldName="Quantity" value="{!pro1.Quantity}" onchange="{}"/></td>                   
+                            <td class="inputbd"><lightning:input type="text" name="Sales Price"  value="{!pro1.priceDec}"/></td> 
+                            <td class="inputbd"><lightning:input type="Date" name="Date" label="" /></td>
+                            <td class="inputbd"><lightning:input type="Text" name="Date" label="Line Description"/></td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+                <lightning:button  variant="Neutral" label="Back" title="Back" onclick="{! c.mainPage }" />
+                <div class="slds-float--right">
+                    <lightning:button  variant="Neutral" label="Cancel" title="Cancel" onclick="{! c.mainPage}" />
+                     <lightning:button  variant="Neutral" label="Confirm" title="Confirm" onclick="{! c.confirmButton}" />
+                    <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.handleSave}" />
+                </div>  
+            </table>
+        </aura:if> 
+    </div>
+    
+</aura:component>

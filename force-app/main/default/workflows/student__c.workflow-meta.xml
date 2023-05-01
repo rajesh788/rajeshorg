@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Student_Age</fullName>
+        <ccEmails>ankur@crmlanding.in</ccEmails>
+        <ccEmails>rajeshnama1993@gmail.com</ccEmails>
+        <description>Student Age</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>rajeshnama@sfdc.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Student_Age_below_18</template>
+    </alerts>
+    <alerts>
+        <fullName>Student_Class_Section_Changed</fullName>
+        <ccEmails>rajeshnama1993@gmail.com</ccEmails>
+        <description>Student Class Section Changed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>rajeshnama@sfdc.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Student_Class_Name_Update</template>
+    </alerts>
+    <rules>
+        <fullName>Student Detail Update</fullName>
+        <actions>
+            <name>Student_Class_Section_Changed</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>ISCHANGED (Contact_Name__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

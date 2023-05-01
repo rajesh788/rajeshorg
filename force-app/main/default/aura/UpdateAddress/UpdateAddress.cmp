@@ -1,0 +1,60 @@
+<aura:component controller="AddressUpdateController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" access="global" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="ac" type="List"/>
+    <aura:attribute name="objectData" type="Object" />
+     <aura:attribute name="streetAt" type="String" />
+     <aura:attribute name="cityAt" type="String" />
+     <aura:attribute name="stateAt" type="String" />
+     <aura:attribute name="postalAt" type="String" />
+     <aura:attribute name="countryAt" type="String" />
+    <aura:html tag="style">
+        .slds-p-around–medium {
+        padding: 0rem !important;
+        }
+        .slds-modal__content{
+        overflow-y:hidden !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        
+    </aura:html>
+    
+    <div class="modal-header slds-modal__header slds-size_1-of-1">
+        <h1 class="title slds-text-heading–medium">Update Address</h1>
+    </div>
+    
+    <lightning:recordEditForm aura:id="leadCreateForm" objectApiName="Lead"  recordId="{!v.recordId}">
+        <lightning:messages />
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-2 slds-p-around_medium">
+                <lightning:input Label="Street" fieldName="Street" aura:id="myStreet" onchange="{!c.streetChange}" ></lightning:input>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-p-around_medium">
+                <lightning:inputField fieldName="City" aura:id="myCity" onchange="{!c.cityChange}" ></lightning:inputField>
+            </div>
+        </div>
+        
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-2 slds-p-around_medium">
+                <lightning:inputField fieldName="State" aura:id="myState" onchange="{!c.stateChange}" ></lightning:inputField>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-p-around_medium">
+                <lightning:inputField fieldName="PostalCode" aura:id="myPostal" onchange="{!c.postalChange}" ></lightning:inputField>
+            </div>
+        </div>
+        
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-2 slds-p-around_medium">
+                <lightning:inputField fieldName="Country" aura:id="myCountry" onchange="{!c.CountryChange}"></lightning:inputField>
+            </div>
+        </div>
+        <lightning:button type="submit" label="Save" variant="brand" class="slds-float_right " onclick="{!c.handleOnSubmit}"/>
+        <lightning:button  label="Cancel"  class="slds-float_right slds-m-left_x-small" onclick="{!c.handleClose}"/>
+    </lightning:recordEditForm>
+    
+    
+</aura:component>

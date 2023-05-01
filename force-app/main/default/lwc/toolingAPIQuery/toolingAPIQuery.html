@@ -1,0 +1,62 @@
+<template>
+    <lightning-card title="Metadata Dependency Explorer" icon-name="custom:custom10">
+
+        <lightning-combobox name="metdataType"
+        label="Metadata Type"
+        placeholder="Select Type"
+        options={types}
+        onchange={handleType}>
+        </lightning-combobox>
+        <template if:true={isApexSelected}>
+            <lightning-combobox name="objects"
+                                label="Select Object"
+                                placeholder="Select Object"
+                                value={selectedApex}
+                                options={apexList}
+                                onchange={handleApexChange}>
+            </lightning-combobox>
+        </template>
+        <template if:true={isLightningSelected}>
+            <lightning-combobox name="Comp"
+                                label="Select Lightning Component"
+                                placeholder="Select Lightning Component"
+                                value={selectedComp}
+                                options={compList}
+                                onchange={handleCompChange}>
+            </lightning-combobox>
+        </template>
+        <template if:true={isFieldSelected}>
+            <lightning-combobox name="Object"
+                label="Object"
+                placeholder="Select Object"
+                options={objectList}
+                value='object'
+                onchange={handleObjectList}>
+            </lightning-combobox>
+            <lightning-combobox name="field"
+                                label="Select Field"
+                                placeholder="Select Field"
+                                options={fieldList}
+                                value={selectedField}
+                                onchange={handleFieldList}>
+            </lightning-combobox>
+       </template>
+        <div class="slds-grid slds-wrap">
+                <div class="slds-size--1-of-1">
+                   <div>
+                        <lightning-button label="Export in CSV" onclick={handleFileDownload}></lightning-button>    
+                    </div>
+                </div>
+                <div class="slds-size--1-of-1">
+                    <div class="slds-float_left slds-m-around_medium">
+                        <lightning-datatable key-field="id"
+                        data={fields}
+                        columns={columns}
+                        show-row-number-column
+                        hide-checkbox-column>
+                    </lightning-datatable>
+                </div>
+                </div>
+    </div>
+    </lightning-card>
+</template>

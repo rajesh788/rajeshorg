@@ -1,0 +1,12 @@
+<template>
+    
+    <lightning-button variant="brand" label="Export Excel" title="Download OR Export Data in the form of Excel"
+				onclick={exportData} icon-name="utility:download"
+				class="slds-m-left_x-small slds-m-right_xx-large slds-m-vertical_large">
+    </lightning-button>
+
+    <button class="slds-button slds-m-top_small slds-button_icon slds-input__icon slds-input__icon_right" title="Filter Record">
+        <lightning-icon icon-name="utility:filterList" size="x-small" alternative-text="close icon" onclick={handleFilterIcon}></lightning-icon> 
+    </button>
+
+</template>

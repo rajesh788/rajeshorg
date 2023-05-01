@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Office__c</fullName>
+    <externalId>false</externalId>
+    <label>Sales_Office</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DANP</fullName>
+                <default>false</default>
+                <label>DANP</label>
+            </value>
+            <value>
+                <fullName>DAAP</fullName>
+                <default>false</default>
+                <label>DAAP</label>
+            </value>
+            <value>
+                <fullName>DAJP</fullName>
+                <default>false</default>
+                <label>DAJP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

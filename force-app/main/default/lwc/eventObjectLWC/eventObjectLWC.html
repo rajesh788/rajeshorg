@@ -1,0 +1,16 @@
+<template>
+	<lightning-modal-header label="Registaration Form"></lightning-modal-header>
+	<lightning-card>
+		<lightning-combobox name="Event Name" label="Event Name" value={label} placeholder="Select Event"
+			options={options} onchange={handleEvntName}></lightning-combobox>
+
+
+
+		<div class="slds-p-around_medium lgc-bg">
+			<lightning-input type="text" label="Name" onchange={handleName}></lightning-input>
+		</div>
+		<div class="slds-p-around_medium lgc-bg">
+			<lightning-input type="text" label="Email" onchange={handleEmail}></lightning-input>
+		</div>
+	</lightning-card>
+</template>

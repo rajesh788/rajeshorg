@@ -1,0 +1,37 @@
+<template>
+	<p>Record Id - {EvtNameFromMain}</p>
+
+	<template for:each={eventQuesResult} for:item="des">
+		<div key={des.id}>
+			<p key={des.id} value={des.id}>{des.Name}</p>
+
+			<lightning-input type={des.Type__c} variant="standard" name="name" label="label" placeholder="type here...">
+			</lightning-input></br>
+		</div>
+
+
+	</template>
+	<div class="slds-grid slds-wrap">
+		<div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-size_6-of-12">
+			<div class="slds-form-element">
+				<label class="slds-form-element__label" for="select-01">Select Label</label>
+				<div class="slds-form-element__control">
+					<div class="slds-select_container">
+						<select class="slds-select" id="select-01" multiple>
+							<option value="">Select…</option>
+							<option>Option One</option>
+							<option>Option Two</option>
+							<option>Option Three</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-size_6-of-12">
+			<span>2</span>
+		</div>
+	</div>
+
+
+
+</template>

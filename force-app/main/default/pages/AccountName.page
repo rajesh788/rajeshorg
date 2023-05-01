@@ -1,0 +1,12 @@
+<apex:page controller="GetAccount">
+    <apex:form > 
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!listofAccounts}" var="acc">
+                <apex:column value="{!acc.name}" /> 
+                <apex:column value="{!acc.AccountNumber}"/>
+                <apex:column value="{!acc.BillingCity}"/>
+                <apex:column value="{!acc.CreatedDate}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>  
+</apex:page>

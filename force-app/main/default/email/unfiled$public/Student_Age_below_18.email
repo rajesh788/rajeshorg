@@ -1,0 +1,6 @@
+Hi {!Class__c.Name__c},
+Your {!Class__c.Name} Fee is due. Deposit fee is  {!Class__c.Fees__c}.
+Please deposit pending amount in this month.
+
+Thanks 
+School Admin

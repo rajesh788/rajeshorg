@@ -1,0 +1,44 @@
+<apex:page renderAs="pdf">
+<apex:form >
+<apex:pageBlock >
+
+ <h1>Detailed budget</h1>
+        <p style="font-family:'Source Code Pro', monospace;">After filling out the 'Budget estimator' tab, plan and track a more detailed
+breakdown by filling out the 'Estimated' and 'Actual' amounts here.</p>
+<p style="font-family:'Source Code Pro', monospace;">The 'Planned budget' , 'Estimated total', and 'Actual total' will
+automatically calculate for you.</p>
+<table>
+<tr>
+    <td style="font-size: 30px;color: orange;">Ceremony</td>
+    <td style="width:px;padding-left:300px;padding-top:20px;">Estimated </td>
+    <td style="width:px;padding-left:100px;padding-top:20px;">Actual</td>
+</tr>
+<tr>
+    <td style="width:px;background-color:;">Decorations/accessories</td>
+    <td style="width:px;padding-left:300px">$150</td>
+    <td style="width:px;padding-left:100px">$300</td>
+</tr>
+<tr>
+    <td>Location fee</td>
+    <td style="width:px;padding-left:300px">$250</td>
+    <td style="width:px;padding-left:100px">$0</td>
+</tr>
+</table>
+
+<div style="width: 500px;height: 1px;border: solid,2px;background-color: gray;padding-top: 0px;padding-left: px;"></div>
+<table>
+<tr>
+    <td style="width:px;padding-left:120px;background-color:">Planned budget</td>
+    <td style="width:px;padding-left:235px">Estimated total</td>
+    <td style="width:px;padding-left:65px">Actual total</td>
+</tr>
+<tr>
+    <td style="width:px;padding-left:180px">$500</td>
+    <td style="width:px;padding-left:235px">$400</td>
+    <td style="width:px;padding-left:65px">$300</td>
+</tr>
+</table>
+
+</apex:pageBlock>
+</apex:form>
+</apex:page>

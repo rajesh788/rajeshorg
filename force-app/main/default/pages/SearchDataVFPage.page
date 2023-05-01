@@ -1,0 +1,19 @@
+<apex:page controller="SearchData" lightningStylesheets="true">
+    <apex:form >
+        
+        <apex:pageBlock title="Enter your SOQL Query" id="rk">
+            <apex:slds />
+            <apex:inputText id="qText" value="{!qText}" style="width:95% ; height:50px">
+            </apex:inputText>
+            <apex:pageBlockButtons location="both">
+                <apex:commandButton action="{!runQuery}" value="Export"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!result}" var="r" rendered="{!showResult}">
+                <apex:repeat value="{!fields}" var="f" rendered="{!showResult}">
+                    <apex:column headerValue="{!f}">{!r[f]}</apex:column> 
+                </apex:repeat>
+            </apex:pageBlockTable>
+                
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

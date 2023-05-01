@@ -1,0 +1,33 @@
+<apex:page controller="College">
+    <apex:form id="form">
+        <apex:pageBlocK title="Basic Details">
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    
+                    <apex:outputLabel >Name
+                    </apex:outputLabel>
+                    <apex:inputText value="{!name}"/>
+                </apex:pageBlockSectionItem>
+                <apex:panelGroup >
+                    <apex:commandButton value="FIND" action="{!searchData}" reRender="form" status="status" />
+                </apex:panelGroup>
+            </apex:pageBlockSection>
+                      
+            <apex:pageBlockSection title="Student Name" collapsible="false">
+                <apex:pageBlockTable value="{!listOfStudents}" var="stu" >
+                    <apex:column value="{!stu.First_Name__c}"/>
+                    <apex:column value="{!stu.Last_Name__c}"/>
+                    <apex:column value="{!stu.DOB__c}"/>
+                    <apex:column value="{!stu.Contact_Name__c}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Teacher Name" collapsible="false">
+                <apex:pageBlockTable value="{!listOfTeacher}" var="tec">
+                    <apex:column value="{!tec.name}"/> 
+                    <apex:column value="{!tec.Subject__c}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlocK>
+    </apex:form>
+</apex:page>

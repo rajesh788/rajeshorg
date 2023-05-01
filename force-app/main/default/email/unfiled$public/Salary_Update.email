@@ -1,0 +1,5 @@
+Hi {!Workflow_Object__c.Employee_Name__c},
+Your Salary is updated and now new salary is {!Workflow_Object__c.Salary__c}.
+
+Thanks
+HR Dept.

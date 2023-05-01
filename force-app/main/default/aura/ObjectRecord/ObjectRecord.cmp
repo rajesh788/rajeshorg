@@ -1,0 +1,77 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId,flexipage:availableForRecordHome" controller="ObjectDataRecord">
+    
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="allObject" type="List" />
+    <aura:attribute name="allField" type="List" />
+    <aura:attribute name="selectedObject" type="String" />
+    <aura:attribute name="selectedField" type="String"/>
+    <aura:attribute name="records" type="List"/>
+    <aura:attribute name="truthy" type="boolean" default="false"/>
+    
+    <aura:attribute name="listOptions" type="List" default="[]"/>
+    
+    <!-- HANDLERS -->
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    
+    <div class="modal-header slds-modal__header slds-size_1-of-1">
+        <h4 class="title slds-text-heading--medium">All Object and Respective Fields</h4>
+    </div>
+    <!--End Modal Header-->
+    
+    <!--Modal Body-->
+    <div class="slds-modal__content slds-p-around--x-small slds-align_absolute-center slds-size_1-of-1 slds-is-relative">
+        <form class="slds-form--stacked">
+            Select Object and get All the Fields..
+        </form>
+    </div>
+    <div class="slds-grid slds-gutters slds-p-around_medium">
+        <div class="slds-col slds-size_1-of-2">
+            <span><lightning:select name="objects" label="Select a Object" aura:id="objectId" value="{!v.selectedObject}" onchange="{!c.handleChange}">
+                <option value="">choose one...</option>
+                <aura:iteration items="{!v.allObject}" var="object">
+                    <option text="{!object.value}" value="{!object.key}" selected="{!object.selected}"/>
+                </aura:iteration>
+                </lightning:select>
+            </span>
+        </div>
+    </div> 
+    <lightning:datatable data="{!v.Contacts}" columns="{!v.Columns}" keyField="" hideCheckboxColumn="true" />
+    
+    <lightning:dualListbox aura:id="fieldId"
+                           name="SobjectField"
+                           label= "Select Field"
+                           sourceLabel="Available"
+                           selectedLabel="Selected"
+                           fieldLevelHelp="Select your preferred Field"
+                           options="{!v.listOptions}"
+                           onchange="{! c.onChange}"/>
+    <div class="slds-align_absolute-center" style="height:5rem">
+            <lightning:button type="submit" variant="brand" name="login" label="Get Records" onclick="{! c.getQueryData}"/>
+        </div>
+     <aura:if isTrue="{!v.truthy}">
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate">Id</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Classify">Account Name</div>
+                    </th>
+                    
+                </tr>
+            </thead>
+            <aura:iteration items="{!v.records}" var="item" indexVar="index">
+                 <tr class="slds-text-title_caps" id="{!index}">
+                    <td>
+                        {!item.Id}
+                    </td>
+                     <td>
+                        {!item.Name}
+                    </td>
+                </tr>
+            </aura:iteration>
+    </table>
+    </aura:if>
+    
+</aura:component>

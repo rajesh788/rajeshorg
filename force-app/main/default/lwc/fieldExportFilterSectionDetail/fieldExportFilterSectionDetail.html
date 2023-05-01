@@ -1,0 +1,26 @@
+<template>
+    <template if:true={isDisplayRange}> 
+        <header class="slds-modal__header">
+            <lightning-button-icon icon-name="utility:close"   alternative-text="close" class="slds-modal__close" title="Add user"  variant="bare-inverse"></lightning-button-icon>
+            
+        </header>
+    
+    <lightning-card title="Range Selector">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-m-left_large">
+                <lightning-input type="date" name="startdate" class="startdate" label="Start Date"
+                    value={startDateTime} onchange={handleStartChange} required></lightning-input>
+            </div>
+            <div class="slds-col slds-m-right_large">
+                <lightning-input type="date" name="enddate" class="enddate" label="End Date" value={endDateTime}
+                    onchange={handleEndChange} required></lightning-input>
+            </div>
+        </div>
+
+        <div>
+            <lightning-button variant="base" label="Get Filtered Record" title="Looks like a link"
+                onclick={selectedDateTime} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-card>
+    </template>
+</template>

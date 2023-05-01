@@ -1,0 +1,55 @@
+<apex:page standardController="Account">
+    
+    <body>
+        <apex:form >
+            <apex:pageBlock >
+                
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!save}" value="Save"/>
+                </apex:pageBlockButtons>
+                <apex:pageBlockSection columns="1" title="Account Information">
+                    <apex:inputField value="{!Account.Name}"/>
+                    <apex:inputField value="{!Account.AccountNumber}"/>
+                    <apex:inputField value="{!Account.OwnerId}"/>
+                    <apex:inputField value="{!Account.Site}"/>
+                    <apex:inputField value="{!Account.AccountSource}"/>
+                    <apex:inputField value="{!Account.Active__c}"/>
+                    <apex:inputField value="{!Account.AnnualRevenue}"/>
+                    
+                    <apex:inputField value="{!Account.CleanStatus}"/>
+                    <apex:inputField value="{!Account.CreatedById}"/>
+                    <apex:inputField value="{!Account.CustomerPriority__c}"/>
+                    <apex:inputField value="{!Account.DandbCompanyId}"/>
+                    <apex:inputField value="{!Account.DunsNumber}"/>
+                    <apex:inputField value="{!Account.Data_Quality_Description__c}"/>
+                    <apex:inputField value="{!Account.Data_Quality_Score__c}"/>
+                    <apex:inputField value="{!Account.Jigsaw}"/>
+                    <apex:inputField value="{!Account.Description}"/>
+                    <apex:inputField value="{!Account.Tier}"/>
+                    <apex:inputField value="{!Account.NumberOfEmployees}"/>
+                    <apex:inputField value="{!Account.Fax}"/>
+                    <apex:inputField value="{!Account.Industry}"/>
+                    <apex:inputField value="{!Account.LastModifiedById}"/>
+                    <apex:inputField value="{!Account.NaicsDesc}"/>
+                    <apex:inputField value="{!Account.NumberofLocations__c}"/>
+                    <apex:inputField value="{!Account.NaicsCode}"/>
+                    <apex:inputField value="{!Account.OperatingHoursId}"/>
+                    <apex:inputField value="{!Account.Ownership}"/>
+                    <apex:inputField value="{!Account.ParentId}"/>
+                    <apex:inputField value="{!Account.Phone}"/>
+                    <apex:inputField value="{!Account.Rating}"/>
+                    
+                    <apex:inputField value="{!Account.Sic}"/>
+                    <apex:inputField value="{!Account.SLA__c}"/>
+                    <apex:inputField value="{!Account.SLAExpirationDate__c}"/>
+                    <apex:inputField value="{!Account.TickerSymbol}"/>
+                    <apex:inputField value="{!Account.Tradestyle}"/>
+                    <apex:inputField value="{!Account.Type}"/>
+                    <apex:inputField value="{!Account.UpsellOpportunity__c}"/>
+                    <apex:inputField value="{!Account.Website}"/>
+                    <apex:inputField value="{!Account.YearStarted}"/>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:form>
+    </body>
+</apex:page>

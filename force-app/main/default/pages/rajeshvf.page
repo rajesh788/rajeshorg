@@ -1,0 +1,441 @@
+<apex:page renderAs="pdf">
+    <apex:form >
+        <apex:pageBlock >
+            <div style="width:100%;background-color:">
+                <div style="width:75%;height:8px;border: hidden,2px;background-color: orange;margin-top: 20px;margin-bottom:40px;margin-left:70px;margin-right:70px;"></div><!--Border-->
+                <div style="width:95%;background-color:;padding-left:120px;margine-right:120px;border:;align:center; ">
+                    <h1 style="color:orange">Detailed budget</h1>
+                    <div style="width:67%;padding-left:0px;padding-right:0px;">
+                        <p style="font-family:sans sarif;font-size:15px;font-color:gray;font-weight:400;">After filling out the 'Budget estimator' tab, plan and track a more detailed
+                            breakdown by filling out the 'Estimated' and 'Actual' amounts here.</p>
+                        <p style="padding-bottom:20px;">The 'Planned budget' , 'Estimated total', and 'Actual total' will
+                            automatically calculate for you.</p>
+                    </div>
+                    <table>
+                        <tr>
+                            <td style="font-size: 28px;color: orange;width:220px;">Ceremony</td>
+                            <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                            <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                        </tr>
+                        <tr>
+                            <td>Decorations/accessories</td>
+                            <td style="padding-left:10px;text-align:right">$150</td>
+                            <td style="padding-left:70px;text-align:right">$300</td>
+                        </tr>
+                        <tr>
+                            <td>Location fee</td>
+                            <td style="padding-left:10px;text-align:right">$250</td>
+                            <td style="padding-left:70px;text-align:right">$0</td>
+                        </tr>
+                    </table>
+                    <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                    <table>   
+                        <tr>
+                            <td style="padding-left:120px;background-color:">Planned budget</td>
+                            <td style="padding-left:15px">Estimated total</td>
+                            <td style="padding-left:30px">Actual total</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$500</td>
+                            <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$400</td>
+                            <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$300</td>
+                        </tr>
+                       
+                        <table>
+                            <tr>
+                                <td style="font-size: 30px;color: orange;width:220px;">Reception</td>
+                                <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                                <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                            </tr>
+                            <tr>
+                                <td>Decorations</td>
+                                <td style="padding-left:10px;text-align:right">$500</td>
+                                <td style="padding-left:70px;text-align:right">$200</td>
+                            </tr>
+                            <tr>
+                                <td>Parking/transportation</td>
+                                <td style="padding-left:10px;text-align:right">$0</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                        </table>
+                        <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                        <table>
+                            <tr>
+                                <td style="padding-left:120px;background-color:">Planned budget</td>
+                                <td style="padding-left:15px">Estimated total</td>
+                                <td style="padding-left:30px">Actual total</td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$750</td>
+                                <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$750</td>
+                                <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                            </tr>          
+                        </table>
+                        
+                        <table>
+                            <tr>
+                                <td style="font-size: 30px;color: orange;width:220px;">Printed materials</td>
+                                <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                                <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                            </tr>
+                            <tr>
+                                <td>Save-the-dates</td>
+                                <td style="padding-left:10px;text-align:right">$100</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                            <tr>
+                                <td>Invitations</td>
+                                <td style="padding-left:10px;text-align:right">$625</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                            <tr>
+                                <td>Wedding programs</td>
+                                <td style="padding-left:10px;text-align:right">$100</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                        </table>
+                        <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                        <table>
+                            <tr>
+                                <td style="padding-left:120px;">Planned budget</td>
+                                <td style="padding-left:15px">Estimated total</td>
+                                <td style="padding-left:30px">Actual total</td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$750</td>
+                                <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$825</td>
+                                <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                            </tr> 
+                        </table>
+                        <table>
+                            <tr>
+                                <td style="font-size:30px;color:orange;width:220px;">Gifts/favors</td>
+                                <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                                <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                            </tr>
+                            <tr>
+                                <td>Attendant gifts</td>
+                                <td style="padding-left:10px;text-align:right">$250</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                            <tr>
+                                <td>Favors</td>
+                                <td style="padding-left:10px;text-align:right">$375</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                            <tr>
+                                <td>Parent gifts</td>
+                                <td style="padding-left:10px;text-align:right">$125</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                        </table>
+                        <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="padding-left:120px;">Planned budget</td>
+                            <td style="padding-left:15px">Estimated total</td>
+                            <td style="padding-left:30px">Actual total</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$750</td>
+                            <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$750</td>
+                            <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                        </tr> 
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="font-size:30px;color:orange;width:220px;">Venue</td>
+                            <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                            <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                        </tr>
+                        <tr>
+                            <td>Location fee </td>
+                            <td style="padding-left:10px;text-align:right">$2000</td>
+                            <td style="padding-left:70px;text-align:right">$0</td>
+                        </tr>
+                        <tr>
+                            <td>Addt'l costs  </td>
+                            <td style="padding-left:10px;text-align:right">$250</td>
+                            <td style="padding-left:70px;text-align:right">$0</td>
+                        </tr>
+                    </table>
+                    <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                    <table>
+                        <tr>
+                            <td style="padding-left:120px;">Planned budget</td>
+                            <td style="padding-left:15px">Estimated total</td>
+                            <td style="padding-left:30px">Actual total</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$2250</td>
+                            <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$2250</td>
+                            <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                        </tr> 
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="font-size: 30px;color: orange;width:220px;">Attire </td>
+                            <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                            <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                        </tr>
+                        <tr>
+                            <td>Wedding attire </td>
+                            <td style="padding-left:10px;text-align:right">$2000</td>
+                            <td style="padding-left:70px;text-align:right">$0</td>
+                        </tr>
+                        <tr>
+                            <td>Alterations</td>
+                            <td style="padding-left:10px;text-align:right">$250</td>
+                            <td style="padding-left:70px;text-align:right">$0</td>
+                        </tr>
+                    </table>
+                    
+                    <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                    <table>
+                        <tr>
+                            <td style="padding-left:120px;">Planned budget</td>
+                            <td style="padding-left:15px">Estimated total</td>
+                            <td style="padding-left:30px">Actual total</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$2250</td>
+                            <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$2250</td>
+                            <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="font-size: 30px;color: orange;width:220px;">Rings</td>
+                            <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                            <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                        </tr>
+                        <tr>
+                            <td>Wedding rings </td>
+                            <td style="padding-left:10px;text-align:right">$500</td>
+                            <td style="padding-left:70px;text-align:right">$0</td>
+                        </tr>
+                    </table>
+                    <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                    <table>
+                        <tr>
+                            <td style="padding-left:120px;">Planned budget</td>
+                            <td style="padding-left:15px">Estimated total</td>
+                            <td style="padding-left:30px">Actual total</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$500</td>
+                            <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$500</td>
+                            <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="font-size: 30px;color: orange;width:220px;">Hair and makeup </td>
+                            <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                            <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                        </tr>
+                        <tr>
+                            <td>Hair/makeup </td>
+                            <td style="padding-left:10px;text-align:right">$250</td>
+                            <td style="padding-left:70px;text-align:right">$0</td>
+                        </tr>
+                    </table>
+                    <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                    <table>
+                        <tr>
+                            <td style="padding-left:120px">Planned budget</td>
+                            <td style="padding-left:15px">Estimated total</td>
+                            <td style="padding-left:30px">Actual total</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$2000</td>
+                            <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$2000</td>
+                            <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="font-size: 30px;color: orange;width:220px;">Flowers </td>
+                            <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                            <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                        </tr>
+                        <tr>
+                            <td>Bouquets </td>
+                            <td style="padding-left:10px;text-align:right">$1000</td>
+                            <td style="padding-left:70px;text-align:right">$0</td>
+                        </tr>
+                        <tr>
+                            <td>Decorations/centerpieces</td>
+                            <td style="padding-left:10px;text-align:right">$1000</td>
+                            <td style="padding-left:10px;text-align:right">$0</td>
+                        </tr>
+                    </table>
+                    <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                    <table>
+                        <tr>
+                            <td style="padding-left:120px;">Planned budget</td>
+                            <td style="padding-left:15px">Estimated total</td>
+                            <td style="padding-left:30px">Actual total</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$2000</td>
+                            <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$2000</td>
+                            <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td style="font-size: 30px;color: orange;width:220px;">Cake </td>
+                            <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                            <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                        </tr>
+                        <tr>
+                            <td>Cake + cutting fee</td>
+                            <td style="padding-left:10px;text-align:right">$0</td>
+                            <td style="padding-left:70px;text-align:right">$0</td>
+                        </tr>
+                    </table>
+                    <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                    <table>
+                        <tr>
+                            <td style="padding-left:120px;">Planned budget</td>
+                            <td style="padding-left:15px">Estimated total</td>
+                            <td style="padding-left:30px">Actual total</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$0</td>
+                            <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$0</td>
+                            <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                        </tr>
+                        <table>
+                            <tr>
+                                <td style="font-size: 30px;color: orange;width:220px">Caterer n drinks</td>
+                                <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                                <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                            </tr>
+                            <tr>
+                                <td>Food + servers </td>
+                                <td style="padding-left:10px;text-align:right">$7000</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                            <tr>
+                                <td>Drinks + bartenders </td>
+                                <td style="padding-left:10px;text-align:right">$1500</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                        </table>
+                        <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                        <table>
+                            <tr>
+                                <td style="padding-left:120px;">Planned budget</td>
+                                <td style="padding-left:15px">Estimated total</td>
+                                <td style="padding-left:30px">Actual total</td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$8500</td>
+                                <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$8500</td>
+                                <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td style="font-size: 30px;color: orange;width:220px;">Photography</td>
+                                <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                                <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                            </tr>
+                            <tr>
+                                <td>Photographer</td>
+                                <td style="padding-left:10px;text-align:right">$1500</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                            <tr>
+                                <td>Videographer</td>
+                                <td style="padding-left:10px;text-align:right">$1250</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                            <tr>
+                                <td>Extra prints</td>
+                                <td style="padding-left:10px;text-align:right">$250</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                        </table>
+                        <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                        <table>
+                            <tr>
+                                <td style="padding-left:120px">Planned budget</td>
+                                <td style="padding-left:15px">Estimated total</td>
+                                <td style="padding-left:30px">Actual total</td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$3000</td>
+                                <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$3000</td>
+                                <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td style="font-size: 30px;color: orange;width:220px;">Entertainment </td>
+                                <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                                <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                            </tr>
+                            <tr>
+                                <td>Ceremony </td>
+                                <td style="padding-left:10px;text-align:right">$250</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                            <tr>
+                                <td>Reception</td>
+                                <td style="padding-left:10px;text-align:right">$1500</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                        </table>
+                        <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                        <table>
+                            <tr>
+                                <td style="padding-left:120px;">Planned budget</td>
+                                <td style="padding-left:15px">Estimated total</td>
+                                <td style="padding-left:30px">Actual total</td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$1750</td>
+                                <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$1750</td>
+                                <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td style="font-size: 30px;color: orange;width:220px;">Misc</td>
+                                <td style="padding-left:10px;padding-top:20px;font-weight:bold;">Estimated </td>
+                                <td style="padding-left:70px;padding-top:20px;font-weight:bold;">Actual</td>
+                            </tr>
+                            <tr>
+                                <td>Coordinator </td>
+                                <td style="padding-left:10px;text-align:right">$500</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                            <tr>
+                                <td>Misc. items</td>
+                                <td style="padding-left:10px;text-align:right">$750</td>
+                                <td style="padding-left:70px;text-align:right">$0</td>
+                            </tr>
+                        </table>
+                        <div style="width: 450px;height: 0.5px;border: solid,0.5px;background-color: rgba(136, 136, 136, 0.25);margin-top: 20px;padding-left: px;"></div>
+                        <table>
+                            <tr>
+                                <td style="padding-left:120px;">Planned budget</td>
+                                <td style="padding-left:15px">Estimated total</td>
+                                <td style="padding-left:30px">Actual total</td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left:120px;text-align:right;padding-bottom: 40px;">$1250</td>
+                                <td style="padding-left:15px;text-align:right;padding-bottom: 40px;">$1250</td>
+                                <td style="padding-left:30px;text-align:right;padding-bottom: 40px;">$0</td>
+                            </tr>
+                        </table>
+                    </table>
+                </div>
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,23 @@
+Dear {!Contact.FirstName},
+<p>Your Experienced updated successfully.</p>
+<p>Your Total Experienced is {!Contact.Experia__c} Years.</p>
+Your Detail is given below:-</br>
+<table style="border: solid; border-collapse: collapse;">
+	<tr style="border: solid;">
+	<td colspan="2" style="border: solid;">First Name:-</td>
+	<td colspan="4" style="border: solid;">{!Contact.FirstName}</td>
+    </tr>
+	<tr>
+		<td colspan="2" style="border: solid;">Last Name:-</td>
+		<td colspan="4" style="border: solid;">{!Contact.LastName}</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border: solid;">Total Experience</td>
+		<td colspan="4" style="border: solid;">{!Contact.Experia__c}</td>
+	</tr>
+</table></br>
+
+
+
+Thanks</br></br>
+School Admin

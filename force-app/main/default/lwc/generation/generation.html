@@ -1,0 +1,54 @@
+<template >
+    <template if:true={isAccountOpen} >
+    <lightning-card  title="Account Details">
+        
+       <lightning-record-edit-form object-api-name="Account">
+           <div class="slds-grid slds-gutters">
+               <div class="slds-col">
+                   <span><lightning-input-field type="text" field-name="Industry" label="Company" onchange={handleValueCmpy}> </lightning-input-field>
+                       <lightning-input-field field-name="Title__c" onchange={handleValueTitle}> </lightning-input-field></span>
+                   </div>
+                   <div class="slds-col">
+                       <span><lightning-input-field field-name="Status__c" onchange={handleValueStatus}> </lightning-input-field>
+                           <lightning-input-field type="text" field-name="Name" onchange={handleValueComnt}> </lightning-input-field></span>
+                       </div>
+           </div>
+       </lightning-record-edit-form>
+       <footer class="slds-modal__footer">
+           <lightning-button variant="brand" label="Next" title="Primary action" onclick={openModal} onchange={handleChange} class="slds-m-left_x-small"></lightning-button>
+       </footer>   
+   
+       </lightning-card> 
+    </template>
+       
+      
+           <lightning-card  title="Contact Details">
+              
+               <template if:true={isContactOpen} for:each={itemList} for:item="item" for:index="index">
+           <lightning-record-edit-form  object-api-name="Contact" key={item.id}>
+               <lightning-messages> </lightning-messages>
+               <div class="slds-grid slds-gutters">
+                   <div class="slds-col">
+                       <span><lightning-input-field  name="firstName" access-key={index} id={index} field-name="FirstName" label="Company" onchange={handleValueFname} value={item.FirstName}> </lightning-input-field>
+                           <lightning-input-field name="lastName" access-key={index} id={index} field-name="LastName" onchange={handleValueLstname} value={item.LastName}> </lightning-input-field></span>
+                       </div>
+                       <div class="slds-col">
+                           <span><lightning-input-field name="mail" access-key={index} id={index} field-name="Email" onchange={handleValueEmail} value={item.Email}> </lightning-input-field>
+                               <lightning-input-field  name="phon" access-key={index} id={index} field-name="Phone" onchange={handleValuePhone} value={item.Phone}> </lightning-input-field></span>
+                           </div>
+               </div>
+               <footer class="slds-modal__footer">
+                   <lightning-button variant="brand" label="Add" title="Add con" onclick={addRow} onchange={addRec} class="slds-m-left_x-small"></lightning-button>
+                   <lightning-button variant="brand" label="Remove" title="Delete con" onclick={removeRow} class="slds-m-left_x-small" access-key={item.id} id={index}></lightning-button>
+               </footer>
+   
+           </lightning-record-edit-form>
+       </template>
+       <lightning-layout>
+           <div class="slds-align_absolute-center">
+               <lightning-button variant="success" onclick={saveRec} name="Save" label="Save">
+               </lightning-button>
+           </div>
+       </lightning-layout>
+           </lightning-card>
+   </template>

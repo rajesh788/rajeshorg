@@ -1,0 +1,6 @@
+Dear {!Student_Info__c.Name__c},
+The Percentage data changed successfully by you.
+Current percentage is {!Student_Info__c.Percentage_in_secondary_Class__c}.
+
+Thanks
+XYZ Company

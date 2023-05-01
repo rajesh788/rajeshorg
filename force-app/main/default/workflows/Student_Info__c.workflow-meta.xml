@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Mob_number_update</fullName>
+        <ccEmails>ankur@crmlanding.in</ccEmails>
+        <description>Mob number update</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Emails__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <recipient>rajeshnama@sfdc.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Profile_updated</template>
+    </alerts>
+    <alerts>
+        <fullName>Update_the_percentage_of_secondary_class</fullName>
+        <ccEmails>rajeshnama1993@gmail.com</ccEmails>
+        <description>Update the percentage of secondary class</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Emails__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Profile_updated</template>
+    </alerts>
+    <rules>
+        <fullName>Mob no update</fullName>
+        <actions>
+            <name>Mob_number_update</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(Phone_Number__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Percentage update</fullName>
+        <actions>
+            <name>Update_the_percentage_of_secondary_class</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Student_Info__c.Percentage_in_secondary_Class__c</field>
+            <operation>lessThan</operation>
+            <value>60</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

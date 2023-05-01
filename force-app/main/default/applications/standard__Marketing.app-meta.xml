@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>Booking_Details__c</tabs>
+    <tabs>Student_Address_Details__c</tabs>
+    <tabs>student__c</tabs>
+    <tabs>Class__c</tabs>
+    <tabs>Domain__c</tabs>
+    <tabs>Product_Category__c</tabs>
+    <tabs>standard-Quote</tabs>
+    <tabs>Accounts_Relationship_Map__c</tabs>
+    <tabs>Vital_Statics__c</tabs>
+    <tabs>Condidate__c</tabs>
+    <tabs>Book__c</tabs>
+    <tabs>Invoice_Object__c</tabs>
+    <tabs>For_Heap_Size__c</tabs>
+    <tabs>Events__c</tabs>
+    <tabs>Question__c</tabs>
+    <tabs>Item1__c</tabs>
+    <tabs>Item2__c</tabs>
+</CustomApplication>

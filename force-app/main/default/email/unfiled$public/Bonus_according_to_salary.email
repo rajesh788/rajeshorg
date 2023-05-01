@@ -1,0 +1,5 @@
+Hi {!Workflow_Object__c.Employee_Name__c},
+Your salary is {!Workflow_Object__c.Salary__c}.You are eligible for Bonus.
+
+Thanks
+HR Dept

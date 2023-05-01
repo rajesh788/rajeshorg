@@ -1,0 +1,39 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="AccountDataController">
+    <aura:attribute name="contactRecords" type="List" default=""/>
+    <aura:attribute name="columns" type="List" default=""/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+  <!--  <lightning:button variant="brand" label="Brand" title="Brand action" onclick="{! c.handleClick }" /> -->
+        
+    <lightning:input type="text" name="searchKey" label="Enter" aura:id="searchKey" onchange="{!c.searchKeyChange}" placeholder="Search" /> 
+    <lightning:datatable
+                         keyField="id"
+                         data="{! v.contactRecords }"
+                         columns="{! v.columns }"
+                         hideCheckboxColumn="true"/>
+</aura:component>
+<!-- <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped" aria-label="Example table of Opportunities with striped rows">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Name">Name</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Email">Email</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Phone">Phone</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.contactRecords}" var="item">
+                <tr>
+                         <td>{!item.Name}</td>
+                         <td>{!item.Email}</td>
+                         <td>{!item.Phone}</td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>-->

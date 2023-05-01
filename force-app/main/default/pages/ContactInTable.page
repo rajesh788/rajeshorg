@@ -1,0 +1,56 @@
+<apex:page controller="ContactPerson" >
+ 
+    <apex:slds >
+        <apex:form >
+            <apex:pageBlock >
+                <apex:pageBlockButtons location="top">
+                    
+                    <apex:commandButton value="Search" action="{!searchContacts}" reRender="contact-table" />
+                    <apex:inputText />
+                    <apex:pageBlockTable value="{!findList}" var="r">
+                        <apex:column value="{!r.FirstName}"/>
+                        <apex:column value="{!r.Lastname}"/>
+                        <apex:column value="{!r.Phone}"/>
+           
+                    </apex:pageBlockTable>
+                    
+                
+                   
+                    
+                
+                </apex:pageBlockButtons>
+               
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped" aria-label="Example table of Opportunities with striped rows">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="First Name">First Name</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Last Name">Last Name</div>
+                            </th>
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Phone">Phone</div>
+                            </th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody>
+                        <apex:repeat value="{!conList}" var="mob">
+                            <tr class="slds-hint-parent">
+                                <td>{!mob.FirstName}</td>
+                                <td>{!mob.LastName}</td>
+                                <td>{!mob.Phone}</td> 
+                            </tr>
+                        </apex:repeat>
+                    </tbody>
+                </table>
+                
+                
+            </apex:pageBlock>
+        </apex:form>
+    </apex:slds>
+    
+    
+    
+</apex:page>

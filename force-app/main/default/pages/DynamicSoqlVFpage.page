@@ -1,0 +1,12 @@
+<apex:page controller="DynamicSoqlQuery">
+    <apex:form >
+        <apex:selectList value="{!sobj}" size="1">
+            <apex:selectOptions value="{!Sobjlist}"/>
+        </apex:selectList>
+        <apex:commandButton action="{!dummy}" value="showlist"/>
+        <apex:dataTable value="{!Records}" var="rec">
+            <apex:column value="{!rec.id}"/>
+            
+        </apex:dataTable>
+    </apex:form>
+</apex:page>

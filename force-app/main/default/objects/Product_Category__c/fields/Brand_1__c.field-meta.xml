@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Brand_1__c</fullName>
+    <externalId>false</externalId>
+    <label>Brand 1</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Addidas</fullName>
+                <default>false</default>
+                <label>Addidas</label>
+            </value>
+            <value>
+                <fullName>Bata</fullName>
+                <default>false</default>
+                <label>Bata</label>
+            </value>
+            <value>
+                <fullName>Nike</fullName>
+                <default>false</default>
+                <label>Nike</label>
+            </value>
+            <value>
+                <fullName>Puma</fullName>
+                <default>false</default>
+                <label>Puma</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

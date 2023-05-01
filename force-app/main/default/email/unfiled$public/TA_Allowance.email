@@ -1,0 +1,6 @@
+Hi {!Workflow_Object__c.Employee_Name__c},
+
+You are not Eligible for Travelling Allowances because your salary is more than 20000.
+
+Thanks 
+HR

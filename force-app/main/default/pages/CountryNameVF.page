@@ -1,0 +1,9 @@
+<apex:page controller="CountryNameAPI" >
+    <apex:form >
+        <span>Countries: </span>
+        <apex:selectList size="5">
+        <!--     <apex:selectOptions value="{!countryLst}" />	-->	
+        </apex:selectList>
+    </apex:form>
+    
+</apex:page>

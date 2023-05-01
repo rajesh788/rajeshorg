@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Of_Birth</fullName>
+    <active>true</active>
+    <errorConditionFormula>(( TODAY() -  Date_Of_Birth__c ) / 365.2425) &gt;10</errorConditionFormula>
+    <errorMessage>Age must be below 10 years.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+.THIS {
+    background-color:white ;
+     
+} 
+
+.THIS.slds-card1 {
+    background-color: 	#FFFAFA;
+    border-top: 3px solid orange;
+    border-bottom: 3px solid orange;
+    height:70px;
+} 
+.THIS.slds-card2 {
+    background-color: 	#FFFAFA;
+     border-top: 2px solid #FFFAFA ;
+    border-bottom: 2px solid #FFFAFA ;
+    height:50px;
+  }

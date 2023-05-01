@@ -1,0 +1,5 @@
+Dear {!student__c.Name},
+Your Contact person name changed suceesfully.Now new contact name is {!student__c.Contact_Name__c}.
+
+Thanks
+Admin Dept

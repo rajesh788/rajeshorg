@@ -1,0 +1,37 @@
+<template>
+
+    <div class="slds-card" style="font-family: 'Open Sans', sans-serif">
+
+        <!-- Header -->
+        <header class="slds-card__header slds-media slds-media_center">
+            <div class="slds-media__figure">
+                <lightning-icon icon-name="standard:custom_notification" size="small"></lightning-icon>
+            </div>
+            <div class="slds-media__body slds-card__header-title slds-text-title_bold" style="font-size: 14px">
+                Component
+            </div>
+        </header>
+
+        <!-- Body -->
+        <div class="slds-p-around_small">
+            <div class="slds-text-align_center slds-container_center" style="font-size: 15px;">
+                <div class="slds-size_2-of-3 slds-align_absolute-center slds-p-bottom_small">
+                    <c-s-object-fields
+                            name="accountLookup"
+                            field-label="Account"
+                            child-object-api-name="Contact"
+                            target-field-api-name="AccountId"
+                            value={accountId}
+                            required="false"
+                            add-to-recent="true"
+                            onvalueselected={handleSelectedLookup}
+                    >
+                    </c-s-object-fields>
+                </div>
+                <p>Id of the selected Account: <span style="font-weight: bold">{accountId}</span></p>
+            </div>
+        </div>
+
+    </div>
+
+</template>
